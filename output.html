@@ -3,7 +3,7 @@
   <script type="text/javascript">
     document.getElementsByTagName('article')[0].classList.add('b-data--no-img');
   </script>
-  <style>ol.snowfall,ul.snowfall{list-style:initial!important;font-size:medium!important;line-height:1.5!important}ol.snowfall>li,ul.snowfall>li{background:0 0!important;margin:0!important;padding:0!important}hr.snowfall{max-width:none!important}</style>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Asap"><link rel="stylesheet" type="text/css" href="https://data.irozhlas.cz/covid-obce/tabulka.css"><style>ol.snowfall,ul.snowfall{list-style:initial!important;font-size:medium!important;line-height:1.5!important}ol.snowfall>li,ul.snowfall>li{background:0 0!important;margin:0!important;padding:0!important}hr.snowfall{max-width:none!important}</style>
 
   <div class="row-main row-main--article">
     <h1 class="b-data__title b-data__title--sm" id="snfl-title-div">
@@ -11,47 +11,28 @@
     </h1>
     <script>
       if (window.location.href.indexOf("www.irozhlas") < 0) {
-        document.getElementById("snfl-title-div").innerHTML = "Data z mobilů:<br>Praha se denně nafoukne o polovinu, v centru jsou návštěvníci v převaze";
+        document.getElementById("snfl-title-div").innerHTML = "Jak rychle se šíří infekce ve vaší obci?";
       }
     </script>
   </div>
 
   <div class="row-main row-main--narrow"> 
     <p class="text-bold text-lg">
-      Skoro 140 tisíc lidí přijede do Prahy každý den za prací. Míří hlavně do kancelářských budov a do centra města. S nimi pak dorazí i přes půl milionu návštěvníků. Ukázala to analýza dat o pohybu mobilních telefonů, kterou si nyní město nechává zpracovat.
+      
     </p>
   </div>
 
   <!--[[ZPRAVY_SNOWFALL_METADATA:]]-->
 
   <div class="row-main row-main--narrow">
-    <figure class="b-detail__img"><img src="https://interaktivni.rozhlas.cz/brexit/media/cover.jpg" width="100%" /><figcaption>Foto <a href='https://ctk.cz'>ČTK</a></figcaption></figure>
-    <div class="b-inline b-inline--left"><div class="b-inline__wrap"><div class="b-inline__content"><div class="text-sm">
-    <p>
-    <b>KAREL HYNEK MÁCHA</b>
-    </p><p>
-    Karel Hynek Mácha (16. listopadu 1810 Praha-Malá Strana[1] – 6. listopadu 1836 Litoměřice[2]) byl český básník a&nbsp;prozaik, představitel českého romantismu a&nbsp;zakladatel moderní české poezie. Proslavil se jak svým životem, tak dílem, jemuž dominuje Máj (1836).
-    </p>
-</div></div></div></div>
+    
+    <div id="datarozhlas-covid-obce-tabulka-okresy"></div>
+<script src="https://data.irozhlas.cz/covid-obce/build/tabulka-okresy.js"></script>
 
-<p>Během dne se lidé v&nbsp;Praze soustřeďují v&nbsp;okolí administrativních center a&nbsp;obchodů, po poledni se tak nejvíc zahustí okolí Andělu, centrum Prahy (Vodičkova ulice a&nbsp;Petrské náměstí) a&nbsp;Brumlovka nedaleko Budějovické. Na poslední jmenované adrese sídlí řada velkých korporací, mezi nimi i&nbsp;Microsoft nebo ČEZ. Pro srovnání, na zmíněných místech je ve „špičce“ okolo šesti stovek osob na jeden hektar, průměr Prahy je 25 obyvatel na <a href="https://cs.wikipedia.org/wiki/Hektar">hektar</a> (Václavské náměstí má rozlohu asi 4 hektary).</p>
-<p>Naopak v&nbsp;noci se nejvíc lidí se „namačká“ ve Vršovicích, jde o&nbsp;430 osob na hektar.</p>
-<p>Detaily si můžete prohlédnout v&nbsp;následující mapě, kterou z&nbsp;dat mobilních operátorů zpracoval pražský <a href="http://www.iprpraha.cz/">Institut plánování a&nbsp;rozvoje</a>.</p>
-</div><div class="row-main row-main--article"><i>Pokud vás zajímá, „kolik“ lidí bývá ve dne a&nbsp;v noci ve vaší čtvrti, najděte si ji na mapě, přepněte se na časové řezy, vyberte přepínač hustota osob a&nbsp;potom pohybujte „posuvníkem“ nahoře.</i></div><div class="row-main row-main--narrow">
+<div id="datarozhlas-covid-obce-tabulka"></div>
+<script src="https://data.irozhlas.cz/covid-obce/build/tabulka.js"></script>
 
-<h2 id="data-na-prodej">Data na prodej</h2>
-<div class="b-inline b-inline--right"><div class="b-inline__wrap"><div class="b-inline__content"><div class="text-sm">
-    <p>
-    <b>KAREL HYNEK MÁCHA</b>
-    </p><p>
-    Karel Hynek Mácha (16. listopadu 1810 Praha-Malá Strana[1] – 6. listopadu 1836 Litoměřice[2]) byl český básník a&nbsp;prozaik, představitel českého romantismu a&nbsp;zakladatel moderní české poezie. Proslavil se jak svým životem, tak dílem, jemuž dominuje Máj (1836).
-    </p>
-</div></div></div></div>
-
-<p>I pokud netelefonujeme nebo neposíláme SMS, telefon pravidelně komunikuje s&nbsp;vysílači v&nbsp;síti mobilního operátora. Z dat o&nbsp;síle signálu a&nbsp;použité anténě je možné odvodit, kde se přibližně telefon nachází a&nbsp;jak dlouhou dobu na místě strávil.</p>
-<p>Mobilní operátor má <a href="https://www.zakonyprolidi.cz/cs/2005-127/zneni-20160919#p97-3">„zákonnou povinnost“</a> takové informace uchovávat, a&nbsp;to půl roku do minulosti, přistupovat k&nbsp;nim ale mohou jen bezpečnostní složky, typicky policie nebo rozvědka.</p>
-<p>Operátoři ale obdobné informace mohou anonymizovat (tedy „zbavit“ identifikace konkrétního uživatele) a&nbsp;agregovat, tedy spojit informace o&nbsp;jednotlivcích do jakýchsi skupin. Výsledná obecná čísla pak přeprodávají dál, například marketingovým firmám či dopravním analytikům. Zpětně z&nbsp;nich nejde dovodit, kde se pohybuje každý jednotlivec, dávají ale určitý přehled o&nbsp;obecném chování obyvatel nějakého místa.</p>
-
+</div><div class="row-main row-main--article"><div class="flourish-embed flourish-map" data-src="visualisation/4100179"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div><div class="row-main row-main--narrow">
     <p class="meta meta--right meta--big">
       <!--[[ZPRAVY_SNOWFALL_AUTHORS:FOOTER]]-->
     </p>
@@ -165,7 +146,7 @@ eval("if (navigator.appName === \"Microsoft Internet Explorer\" || !!(navigator.
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _byeie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./byeie */ \"./js/byeie.js\");\n/* harmony import */ var _byeie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_byeie__WEBPACK_IMPORTED_MODULE_0__);\n // loučíme se s IE\n\n/*\r\n// snadné načtení souboru pro každého!\r\nfetch(\"https://blabla.cz/blabla.json\")\r\n  .then(response => response.json()) // nebo .text(), když to není json\r\n  .then(data => {\r\n    // tady jde provést s daty cokoliv\r\n  });\r\n*/\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _byeie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./byeie */ \"./js/byeie.js\");\n/* harmony import */ var _byeie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_byeie__WEBPACK_IMPORTED_MODULE_0__);\n // loučíme se s IE\n\n/*\n// snadné načtení souboru pro každého!\nfetch(\"https://blabla.cz/blabla.json\")\n  .then(response => response.json()) // nebo .text(), když to není json\n  .then(data => {\n    // tady jde provést s daty cokoliv\n  });\n*/\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ })
 
