@@ -33,16 +33,71 @@
 <script src="https://data.irozhlas.cz/covid-obce/build/tabulka-okresy.js"></script>
 
 
-<p>V aplikaci, která se každý den automaticky aktualizuje, najdete poslední údaje nejen z&nbsp;okresů, ale po rozkliknutí i&nbsp;ve všech obcích daného okresu. Seřadit podle různých kritérií si je můžete kliknutím na název sloupce.</p>
+<p>Aplikace je inspirovaná <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">projektem New York Times</a>. Každý den se automaticky aktualizuje a&nbsp;najdete v&nbsp;ní poslední údaje nejen z&nbsp;okresů, ale po rozkliknutí i&nbsp;ve všech obcích daného okresu. Seřadit podle různých kritérií si je můžete kliknutím na název sloupce.</p>
 <p>České občany pozitivně testované na koronavirus aplikace sčítá podle místa jejich trvalého pobytu. Součty se proto mohou lišit od výsledků zveřejňovaných krajskými hygienickými stanicemi, pro něž není určující bydliště nemocných, ale místo výskytu nákazy.</p>
 <p>Čísla nevypovídají jen o&nbsp;rychlosti šíření nemoci covid-19, ale také o&nbsp;finanční či dopravní dostupnosti testů a&nbsp;ochotě lidí je podstupovat. Podrobné údaje o&nbsp;provedených testech, která by umožnila vliv těchto faktorů odfiltrovat, však české úřady nepublikují.</p>
 <h2 id="podrobnosti-by-vyvolaly-paniku">Podrobnosti by vyvolaly paniku</h2>
 <p>Také tato <a href="https://share.uzis.cz/s/dCZBiARJ27ayeoS">nyní již veřejná</a> data o&nbsp;pozitivně testovaných lidech podle obce, kde jsou přihlášeni k&nbsp;trvalému pobytu, ministerstvo zdravotnictví dlouho tajilo.</p>
 <p>Server iROZHLAS.cz o&nbsp;ně podle zákona o&nbsp;svobodném přístupu k&nbsp;informacím <a href="https://www.irozhlas.cz/zpravy-domov/soud-uzis-nzis-statistika-covid-koronavirus_2008030705_cib">požádal poprvé v&nbsp;dubnu</a>, úřad mu však ani po odvolání nevyhověl. Jeho argumentace se točila kolem <a href="https://www.zakonyprolidi.cz/cs/2011-372/zneni-20190424#p73-7">jediné věty</a>, kterou do zákona o&nbsp;zdravotních službách před dvěma lety prosadil poslanec ČSSD a&nbsp;hejtman kraje Vysočina Jiří Běhounek. V důvodové zprávě uvedl, že poskytování dat z&nbsp;Národního zdravotnického informačního systému veřejnosti by mohlo vést k&nbsp;„zavádějícím informacím o&nbsp;zdravotním stavu a&nbsp;vyvolávat u&nbsp;laického občana zbytečné obavy“.</p>
 <p>Datoví novináři iROZHLASu o&nbsp;stejná data adresněji znovu <a href="https://www.irozhlas.cz/zpravy-domov/data-uzis-covid-19-cisla-informace_2009231251_cib">požádali v&nbsp;srpnu</a>, kdy je úřad začal poskytovat v&nbsp;méně podrobném členění, a&nbsp;to pouze starostům obcí. Ministerští právníci žádost opět smetli ze stolu, protože by podle nich detailní čísla vyvolala paniku a&nbsp;chaos. „Nezastupitelnou roli při řešení nastalé pandemie přitom ministerstvo sehrává rovněž při zklidňování veřejnosti a&nbsp;vysvětlování této celospolečenské, bezprecedentní, situace,“ napsali do zdůvodnění.</p>
-</div><div class="row-main row-main--article"><div class="flourish-embed flourish-map" data-src="visualisation/4100179"><script src="https://public.flourish.studio/resources/embed.js"></script></div></div><div class="row-main row-main--narrow">
+</div><div class="row-main row-main--article">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
 
-<p>Změnu v&nbsp;komunikační strategii přinesl až nástup ministra zdravotnictví Romana Prymuly na konci září. „Nebráním se tomu, abychom publikovali vše, o&nbsp;co bude zájem,“ prohlásil na tiskové konferenci 16. října a&nbsp;v následujících dnech se skutečně v&nbsp;zákoutích ministerského webu začala objevovat některá z&nbsp;dat, která byla dříve pro laickou, ale i&nbsp;velkou část odborné veřejnosti, úřadem zapovězena.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" integrity="sha512-4UKI/XKm3xrvJ6pZS5oTRvIQGIzZFoXR71rRBb1y2N+PbwAsKa5tPl2J6WvbEvwN3TxQCm8hMzsl/pO+82iRlg==" crossorigin="anonymous"></script>
+
+<style>
+    #covid_mapa { width:100%; height: 60vh; }
+    .stylesel, #inp-btn {
+      background-color:#ffffff;
+      border-radius:6px;
+      border:1px solid #dcdcdc;
+      display:inline-block;
+      cursor:pointer;
+      color:#666666;
+      font-size:12px;
+      padding:3px 12px;
+      margin: 1px;
+      text-decoration:none;
+    }
+    #inp-geocode {
+      background-color:#ffffff;
+      border-radius:6px;
+      border:1px solid #dcdcdc;
+      display:inline-block;
+      color:#666666;
+      font-size:12px;
+      padding:3px 12px;
+      margin: 1px;
+      text-decoration:none;
+    }
+</style>
+
+<div id="style_select">
+  <button type="button" class="stylesel aktual">Aktuální stav</button> 
+  <button type="button" class="stylesel tyden">Před týdnem</button> 
+  <button type="button" class="stylesel dva">Před dvěma týdny</button> 
+  <button type="button" class="stylesel mesic">Před měsícem</button> 
+  <button type="button" class="stylesel prazd_stop">Konec prázdnin</button> 
+  <button type="button" class="stylesel prazd_start">Začátek prázdnin</button> 
+  <button type="button" class="stylesel velik">Velikonoce</button>
+</div>
+
+<form action="?" id='geocoder'>
+  <div class="inputs">
+      <input type="text" id="inp-geocode" placeholder="Zadejte obec či adresu...">
+      <input type="submit" id="inp-btn" value="Najít">
+  </div>
+</form>
+
+<div id='covid_mapa'></div>
+
+<script src="https://data.irozhlas.cz/covid-obce-mapa/mapa.js"></script>
+</div><div class="row-main row-main--narrow">
+<br>
+Změnu v&nbsp;komunikační strategii přinesl až nástup ministra zdravotnictví Romana Prymuly na konci září. „Nebráním se tomu, abychom publikovali vše, o&nbsp;co bude zájem,“ prohlásil na tiskové konferenci 16. října a&nbsp;v následujících dnech se skutečně v&nbsp;zákoutích ministerského webu začala objevovat některá z&nbsp;dat, která byla dříve pro laickou, ale i&nbsp;velkou část odborné veřejnosti, úřadem zapovězena.
+
 <p>V té době už ale byla epidemie na českém území rozjetá a&nbsp;republika se propracovávala do čela celosvětových statistik. Jak ukazují data, z&nbsp;nichž je sestaven následující žebříček a&nbsp;mapa všech obcí, v&nbsp;Česku nezůstává mnoho míst, kde se nákaza dosud neprokázala. Sice téměř pětina obcí neměla v&nbsp;neděli 25. října mezi svými trvale hlášenými obyvateli žádný aktivní případ koronaviru, bez výjimky šlo o&nbsp;malé obce, v&nbsp;nichž dohromady žije jen něco přes dvě procenta obyvatel ČR. Absence pozitivně testovaných navíc neznamená, že se v&nbsp;nich nákaza nevyskytuje.  </p>
 <div id="datarozhlas-covid-obce-tabulka"></div>
 <script src="https://data.irozhlas.cz/covid-obce/build/tabulka.js"></script>
