@@ -30,6 +30,8 @@ Server iROZHLAS.cz o ně podle zákona o svobodném přístupu k informacím [po
 Datoví novináři iROZHLASu o stejná data adresněji znovu [požádali v srpnu](https://www.irozhlas.cz/zpravy-domov/data-uzis-covid-19-cisla-informace_2009231251_cib), kdy je úřad začal poskytovat v méně podrobném členění, a to pouze starostům obcí. Ministerští právníci žádost opět smetli ze stolu, protože by podle nich detailní čísla vyvolala paniku a chaos. „Nezastupitelnou roli při řešení nastalé pandemie přitom ministerstvo sehrává rovněž při zklidňování veřejnosti a vysvětlování této celospolečenské, bezprecedentní, situace,“ napsali do zdůvodnění.
 
 <wide>
+<h2>Kolik lidí má testem potvrzený covid-19 ve vaší obci</h2>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
@@ -83,8 +85,9 @@ Datoví novináři iROZHLASu o stejná data adresněji znovu [požádali v srpnu
 <div id='covid_mapa'></div>
 
 <script src="https://data.irozhlas.cz/covid-obce-mapa/mapa.js"></script>
+<em>Kliknutím na oběc v mapě zobrazíte podrobnosti.</em>
 </wide>
-<br>
+
 Změnu v komunikační strategii přinesl až nástup ministra zdravotnictví Romana Prymuly na konci září. „Nebráním se tomu, abychom publikovali vše, o co bude zájem,“ prohlásil na tiskové konferenci 16. října a v následujících dnech se skutečně v zákoutích ministerského webu začala objevovat některá z dat, která byla dříve pro laickou, ale i velkou část odborné veřejnosti, úřadem zapovězena.
 
 V té době už ale byla epidemie na českém území rozjetá a republika se propracovávala do čela celosvětových statistik. Jak ukazují data, z nichž je sestaven následující žebříček a mapa všech obcí, v Česku nezůstává mnoho míst, kde se nákaza dosud neprokázala. Sice téměř pětina obcí neměla v neděli 25. října mezi svými trvale hlášenými obyvateli žádný aktivní případ koronaviru, bez výjimky šlo o malé obce, v nichž dohromady žije jen něco přes dvě procenta obyvatel ČR. Absence pozitivně testovaných navíc neznamená, že se v nich nákaza nevyskytuje.  
