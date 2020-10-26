@@ -1,11 +1,11 @@
 title: "Největší ohniska i poslední ostrůvky bez zjištěné nákazy. Sledujte, jak rychle se šíří koronavirus ve vaší obci"
-perex: "Na základě dat, které ministerstvo zdravotnictví až do poloviny října tajilo, připravil server iROZHLAS.cz interaktivní aplikaci a mapu. Můžete si v nich porovnat, kde s jakou rychlostí přibývá či ubývá pozitivně testovnaých a kde je aktuálně nejvíc aktivních případů nemoci covid-19."
+perex: "Na základě dat, která ministerstvo zdravotnictví až do poloviny října tajilo, připravil server iROZHLAS.cz interaktivní aplikaci a mapu. Můžete si v nich porovnat, kde a s jakou rychlostí přibývá, či ubývá pozitivně testovnaých a kde je aktuálně nejvíc aktivních případů nemoci covid-19."
 styles: ["https://fonts.googleapis.com/css2?family=Asap", "https://data.irozhlas.cz/covid-obce/tabulka.css"]
 libraries: [] #jquery, d3, highcharts, datatables
 options: [noheader, nopic] #wide, noheader (, nopic)
 ---
 
-V Česku na konci minulého týdne [přibývalo každý den přes 100 nově diagnostikovaných případů nákazy koronavirem na 100 tisíc obyvatel](https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&country=~CZE&region=World&casesMetric=true&interval=smoothed&perCapita=true&smoothing=7&pickerMetric=total_cases&pickerSort=desc). „Takovou rychlost šíření jsme dosud neviděli skoro nikde jinde,“ [komentoval to Max Roser](https://twitter.com/MaxCRoser/status/1318863783146721281) z univerzity v Oxfordu, zakladatel [respektované databáze](https://ourworldindata.org/coronavirus) zachycující průběh pandemie. „Počet testů je přitom (v ČR ve srovnání s jinými státy - pozn. red.) velmi nízký. A hodně rychle stoupá i počet úmrtí,“ doplnil.
+V Česku na konci minulého týdne [přibývalo každý den přes 100 nově diagnostikovaných případů nákazy koronavirem na 100 tisíc obyvatel](https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&country=~CZE&region=World&casesMetric=true&interval=smoothed&perCapita=true&smoothing=7&pickerMetric=total_cases&pickerSort=desc). „Takovou rychlost šíření jsme dosud neviděli skoro nikde jinde,“ [komentoval to Max Roser](https://twitter.com/MaxCRoser/status/1318863783146721281) z univerzity v Oxfordu, zakladatel [respektované databáze](https://ourworldindata.org/coronavirus) zachycující průběh pandemie. „Počet testů je přitom *(v ČR ve srovnání s jinými státy - pozn. red.)* velmi nízký. A hodně rychle stoupá i počet úmrtí,“ doplnil.
 
 Na „semaforu“ ministerstva zdravotnictví [zčervenaly všechny okresy](https://onemocneni-aktualne.mzcr.cz/covid-19/stupne-pohotovosti), obtížně kontrolovatelný komunitní přenos nákazy už se tedy i podle hygieniků rozběhl v celé republice.
 
@@ -19,7 +19,7 @@ Aplikace je inspirovaná [projektem New York Times](https://www.nytimes.com/inte
 
 České občany pozitivně testované na koronavirus aplikace sčítá podle místa jejich trvalého pobytu. Součty se proto mohou lišit od výsledků zveřejňovaných krajskými hygienickými stanicemi, pro něž není určující bydliště nemocných, ale místo výskytu nákazy.
 
-Čísla nevypovídají jen o rychlosti šíření nemoci covid-19, ale také o finanční či dopravní dostupnosti testů a ochotě lidí je podstupovat. Podrobné údaje o provedených testech, která by umožnila vliv těchto faktorů odfiltrovat, však české úřady nepublikují.
+Čísla nevypovídají jen o rychlosti šíření nemoci covid-19, ale také o finanční či dopravní dostupnosti testů a ochotě lidí je podstupovat. Podrobné údaje o provedených testech, které by umožnily vliv těchto faktorů odfiltrovat, však české úřady nepublikují.
 
 ## Podrobnosti by vyvolaly paniku
 
@@ -88,7 +88,7 @@ Datoví novináři iROZHLASu o stejná data adresněji znovu [požádali v srpnu
 <em>Kliknutím na oběc v mapě zobrazíte podrobnosti.</em>
 </wide>
 
-Změnu v komunikační strategii přinesl až nástup ministra zdravotnictví Romana Prymuly na konci září. „Nebráním se tomu, abychom publikovali vše, o co bude zájem,“ prohlásil na tiskové konferenci 16. října a v následujících dnech se skutečně v zákoutích ministerského webu začala objevovat některá z dat, která byla dříve pro laickou, ale i velkou část odborné veřejnosti, úřadem zapovězena.
+Změnu v komunikační strategii přinesl až nástup ministra zdravotnictví Romana Prymuly na konci září. „Nebráním se tomu, abychom publikovali vše, o co bude zájem,“ prohlásil na tiskové konferenci 16. října a v následujících dnech se skutečně v zákoutích ministerského webu začala objevovat některá z dat, která byla dříve pro laickou, ale i velkou část odborné veřejnosti úřadem zapovězena.
 
 V té době už ale byla epidemie na českém území rozjetá a republika se propracovávala do čela celosvětových statistik. Jak ukazují data, z nichž je sestaven následující žebříček a mapa všech obcí, v Česku nezůstává mnoho míst, kde se nákaza dosud neprokázala. Sice téměř pětina obcí neměla v neděli 25. října mezi svými trvale hlášenými obyvateli žádný aktivní případ koronaviru, bez výjimky šlo o malé obce, v nichž dohromady žije jen něco přes dvě procenta obyvatel ČR. Absence pozitivně testovaných navíc neznamená, že se v nich nákaza nevyskytuje.  
 
